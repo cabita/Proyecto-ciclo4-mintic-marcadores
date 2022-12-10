@@ -8,6 +8,8 @@ import { DeportesModule } from './deportes/deportes.module';
 import { EquiposModule } from './equipos/equipos.module';
 import { EventosModule } from './eventos/eventos.module';
 import { SharedModule } from './shared/shared.module';
+import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -16,11 +18,13 @@ import { SharedModule } from './shared/shared.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    RouterModule,
     NgbModule,
     DeportesModule,
     EquiposModule,
     EventosModule,
-    SharedModule
+    SharedModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

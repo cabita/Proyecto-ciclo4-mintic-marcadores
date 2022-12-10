@@ -8,6 +8,9 @@
 
 # Node
 /node_modules
+/front-angular/node_modules
+/front-marcadores/node_modules
+/marcadores/node_modules
 npm-debug.log
 yarn-error.log
 

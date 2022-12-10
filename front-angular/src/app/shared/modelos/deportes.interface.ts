@@ -1,5 +1,5 @@
 export interface Deporte {
-  id: string;
+  _id: string;
   nombre: string;
   fechaCreacion: string;
 }

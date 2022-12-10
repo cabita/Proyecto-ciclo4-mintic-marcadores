@@ -1,0 +1,19 @@
+.mt-input {
+  display: flex;
+  flex-direction: column;
+  &__label {
+    display: block;
+  }
+  &__field {
+    width: 100%;
+    max-width: 60rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 0.8rem;
+    margin: 0.5rem 0;
+  }
+}
+
+.error {
+  font-size: 14px;
+  padding-left: 0.5rem;
+}

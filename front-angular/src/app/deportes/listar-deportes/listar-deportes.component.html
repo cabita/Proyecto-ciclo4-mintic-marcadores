@@ -1,1 +1,34 @@
-<p>listar-deportes works!</p>
+<section class="mt-card">
+  <div class="row">
+    <div class="col-12 col-md-6 mt-card__titulo">
+      <app-titulo-seccion titulo="Deportes"></app-titulo-seccion>
+        <app-boton text="Crear deporte"
+                   (click)="crearDeporte()"
+        ></app-boton>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="mt-card mt-card--primary col-12 col-md-6"
+         [ngClass]="{'mt-card--small': sizeCard === 'small'}">
+
+      <ul *ngIf="deportes"
+          class="mt-card-list">
+        <li class="mt-card__item" *ngFor="let deporte of deportes">
+          <p>
+            <span class="mt-card__item-bullet"> </span>{{ deporte.nombre }}
+          </p>
+          <div>
+            <app-boton text="Editar"
+                       (click)="editarDeporte(deporte._id)"></app-boton>
+            <app-boton text="Eliminar"
+                       class="warning"
+                       (click)="eliminarDeporte(deporte._id)"></app-boton>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+

@@ -1,0 +1,23 @@
+.mt-boton {
+  padding: 0.5rem 1.2rem;
+  margin: 0.5rem 1rem;
+  border-radius: 0.8rem;
+  border: 0;
+
+  &--primario {
+    color: #1b381e;
+    background-color: #83db7b;
+    &:hover {
+      background-color: darken(#83db7b, 20%);
+      color: #FFFFFF;
+    }
+  }
+  &--warning {
+    color: #FFFFFF;
+    background: #be0f0f;
+    &:hover {
+      background-color: darken(#be0f0f, 10%);
+      color: #FFFFFF;
+    }
+  }
+}

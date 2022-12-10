@@ -1,1 +1,3 @@
-<p>listar-eventos works!</p>
+<ul *ngIf="eventos">
+  <li *ngFor="let evento of eventos">{{ eventos | json }}</li>
+</ul>

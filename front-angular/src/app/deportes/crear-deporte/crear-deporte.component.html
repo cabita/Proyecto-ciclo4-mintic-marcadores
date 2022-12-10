@@ -1,1 +1,25 @@
-<p>crear-deporte works!</p>
+<section class="mt-deportes">
+
+  <app-titulo-seccion titulo="Crear deporte"></app-titulo-seccion>
+
+  <form class="mt-deportes__form">
+    <p>
+      <app-input label = "Ingresa el deporte:"
+                 [form] = "crearDeporteForm"
+                 name = "nombre"
+                 [error] = error>
+      </app-input>
+    </p>
+
+    <p class="mt-deportes__form-botones">
+      <app-boton text="Crear deporte"
+                 class="primario"
+                 (click)="crearDeporte()"></app-boton>
+      <app-boton text="Cancelar"
+                 (click)="cancelar()"></app-boton>
+    </p>
+
+  </form>
+
+</section>
+

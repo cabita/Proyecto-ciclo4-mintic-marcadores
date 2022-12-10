@@ -1,1 +1,5 @@
-<p>listar-equipos works!</p>
+<ul *ngIf="equipos">
+  <li *ngFor="let equipo of equipos"> {{ equipo.nombre }}</li>
+</ul>
+
+

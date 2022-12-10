@@ -1,0 +1,12 @@
+<div class="mt-input" [formGroup]="form">
+  <label  class="mt-input__label">{{label}}
+  <input class="mt-input__field"
+         type={{type}}
+         placeholder="{{placeholder}}"
+         (change)="valueField.emit"
+         formControlName="{{name}}"
+         name="{{name}}"
+         >
+  </label>
+</div>
+<p class="error" *ngIf="error">{{error}}</p>
