@@ -48,7 +48,6 @@ export class EditarDeporteComponent implements OnInit {
         this.router.navigate(['/deportes']);
       }, (error => {
         this.error = error.error.msj;
-        console.log(error, 'error')
       }))
     }
   }

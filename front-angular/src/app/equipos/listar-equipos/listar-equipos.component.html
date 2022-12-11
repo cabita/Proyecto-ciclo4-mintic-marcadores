@@ -1,5 +1,34 @@
-<ul *ngIf="equipos">
-  <li *ngFor="let equipo of equipos"> {{ equipo.nombre }}</li>
-</ul>
+<section class="mt-card">
+  <div class="row">
+    <div class="col-12 col-md-6 mt-card__titulo">
+      <app-titulo-seccion titulo="Equipos"></app-titulo-seccion>
+        <app-boton text="Crear equipo"
+                   (click)="crearEquipo()"
+        ></app-boton>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="mt-card mt-card--primary col-12 col-md-6"
+         [ngClass]="{'mt-card--small': sizeCard === 'small'}">
+
+      <ul *ngIf="equipos"
+          class="mt-card-list">
+        <li class="mt-card__item" *ngFor="let equipo of equipos">
+          <p>
+            <span class="mt-card__item-bullet"> </span>{{ equipo.nombre }}
+          </p>
+          <div>
+            <app-boton text="Editar"
+                       (click)="editarEquipo(equipo._id)"></app-boton>
+            <app-boton text="Eliminar"
+                       class="warning"
+                       (click)="eliminarEquipo(equipo._id)"></app-boton>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
 
 

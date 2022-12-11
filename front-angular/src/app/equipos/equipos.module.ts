@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { CrearEquipoComponent } from './crear-equipo/crear-equipo.component';
 import { EditarEquipoComponent } from './editar-equipo/editar-equipo.component';
 import { ListarEquiposComponent } from './listar-equipos/listar-equipos.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -13,7 +15,9 @@ import { ListarEquiposComponent } from './listar-equipos/listar-equipos.componen
     ListarEquiposComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ReactiveFormsModule,
+    SharedModule
   ],
   exports: [
     CrearEquipoComponent,

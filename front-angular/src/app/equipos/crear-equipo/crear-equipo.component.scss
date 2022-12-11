@@ -1,0 +1,9 @@
+.mt-equipos {
+  height: calc(90vh - 10rem);
+  &__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

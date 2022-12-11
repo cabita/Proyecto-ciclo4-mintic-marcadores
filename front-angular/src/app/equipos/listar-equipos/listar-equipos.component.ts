@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Equipo } from 'src/app/shared/modelos/equipos.interface';
 import { EquiposService } from '../equipos.service';
 
@@ -8,9 +9,11 @@ import { EquiposService } from '../equipos.service';
   styleUrls: ['./listar-equipos.component.scss']
 })
 export class ListarEquiposComponent implements OnInit {
-  equipos:Equipo[] = [];
+  @Input() sizeCard: string = 'small';
+  equipos: Equipo[] = [];
 
-  constructor( private equiposService: EquiposService ) {}
+  constructor( private equiposService: EquiposService,
+               private router: Router ) { }
 
   ngOnInit(): void {
     this.listarEquipos();
@@ -19,6 +22,20 @@ export class ListarEquiposComponent implements OnInit {
   listarEquipos () {
     this.equiposService.listarEquipos().subscribe( res => {
       this.equipos = res;
+    })
+  }
+
+  crearEquipo() {
+    this.router.navigate(['equipos/crear']);
+  }
+
+  editarEquipo(id: string) {
+    this.router.navigate([`equipos/editar/${id}`]);
+  }
+
+  eliminarEquipo(id:string) {
+    this.equiposService.eliminarEquipo(id).subscribe( res => {
+      this.listarEquipos();
     })
   }
 

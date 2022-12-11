@@ -9,12 +9,30 @@ import { Equipo } from '../shared/modelos/equipos.interface';
 })
 export class EquiposService {
 
-    baseUrl = environment.baseUrl;
+  baseUrl = environment.baseUrl;
 
-    constructor( private http: HttpClient ) { }
+  constructor( private http: HttpClient ) { }
 
-    listarEquipos(): Observable<Equipo[]> {
-      return this.http.get<Equipo[]>(`${ this.baseUrl }/equipos`);
-    }
+  listarEquipos(): Observable<Equipo[]> {
+    return this.http.get<Equipo[]>(`${ this.baseUrl }/equipos`);
+  }
 
+  obtenerEquipoPorId(id:string) {
+    return this.http.get<Equipo>(`${ this.baseUrl }/equipos/${id}`);
+  }
+
+  crearEquipo( nombre:string ) {
+    let data = { nombre };
+    return this.http.post<Equipo>(`${ this.baseUrl }/equipos`, data );
+  }
+
+  editarEquipo( id: string, nombre: string ) {
+    let data = { id, nombre }
+
+    return this.http.put<Equipo>(`${ this.baseUrl }/equipos`, data );
+  }
+
+  eliminarEquipo( id: string ) {
+    return this.http.delete<any>(`${ this.baseUrl }/equipos/${id}`);
+  }
 }

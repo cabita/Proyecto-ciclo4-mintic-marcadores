@@ -86,7 +86,7 @@ const eliminarEquipo = async(req, res) => {
         const respuesta = await equiposModel.deleteOne(
             {_id: id}
         )
-        res.status(200).send("El registro se ha eliminado")
+        res.status(200).send({ 'mensaje': "El registro se ha eliminado"})
     }
 }
 
