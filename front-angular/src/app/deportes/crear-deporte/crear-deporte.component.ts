@@ -31,7 +31,7 @@ export class CrearDeporteComponent  {
 
     if( nombre ) {
       this.deportesService.crearDeporte(nombre).subscribe( res => {
-        this.router.navigate(['/deportes']);
+        this.router.navigate(['admin/deportes']);
       }, (error => {
         this.error = error.error.msj;
       }))
@@ -39,7 +39,7 @@ export class CrearDeporteComponent  {
   }
 
   cancelar():void {
-    this.router.navigate(['/deportes']);
+    this.router.navigate(['admin/deportes']);
   }
 
 

@@ -62,7 +62,7 @@ export class EditarEventoComponent implements OnInit {
 
     if( data ) {
       this.eventosService.editarEvento(this.id, data).subscribe( res => {
-        this.router.navigate(['/eventos']);
+        this.router.navigate(['admin/eventos']);
       }, (error => {
         this.error = error.error.msj;
       }))
@@ -70,7 +70,7 @@ export class EditarEventoComponent implements OnInit {
   }
 
   cancelar():void {
-    this.router.navigate(['/eventos']);
+    this.router.navigate(['admin/eventos']);
   }
 
   obtenerEventoPorId(id:string) {

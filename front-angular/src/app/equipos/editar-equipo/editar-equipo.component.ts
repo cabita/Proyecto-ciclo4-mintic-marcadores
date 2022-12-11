@@ -45,7 +45,7 @@ export class EditarEquipoComponent implements OnInit {
 
     if( nombre ) {
       this.equiposService.editarEquipo(this.id, nombre).subscribe( res => {
-        this.router.navigate(['/equipos']);
+        this.router.navigate(['admin/equipos']);
       }, (error => {
         this.error = error.error.msj;
       }))
@@ -55,7 +55,7 @@ export class EditarEquipoComponent implements OnInit {
 
 
   cancelar():void {
-    this.router.navigate(['/equipos']);
+    this.router.navigate(['admin/equipos']);
   }
 
 }

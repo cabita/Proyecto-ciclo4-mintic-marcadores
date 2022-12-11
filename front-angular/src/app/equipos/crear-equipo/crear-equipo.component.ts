@@ -32,7 +32,7 @@ export class CrearEquipoComponent {
 
     if( nombre ) {
       this.equiposService.crearEquipo(nombre).subscribe( res => {
-        this.router.navigate(['/equipos']);
+        this.router.navigate(['admin/equipos']);
       }, (error => {
         this.error = error.error.msj;
       }))
@@ -40,7 +40,7 @@ export class CrearEquipoComponent {
   }
 
   cancelar():void {
-    this.router.navigate(['/equipos']);
+    this.router.navigate(['admin/equipos']);
   }
 
 

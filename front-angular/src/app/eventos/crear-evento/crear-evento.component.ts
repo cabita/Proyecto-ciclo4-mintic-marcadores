@@ -52,7 +52,7 @@ export class CrearEventoComponent implements OnInit {
 
     if( data ) {
       this.eventosService.crearEvento(data).subscribe( res => {
-        this.router.navigate(['/eventos']);
+        this.router.navigate(['admin/eventos']);
       }, (error => {
         this.error = error.error.msj;
       }))
@@ -60,7 +60,7 @@ export class CrearEventoComponent implements OnInit {
   }
 
   cancelar():void {
-    this.router.navigate(['/eventos']);
+    this.router.navigate(['admin/eventos']);
   }
 
   arrayOpcionesDeportes() {

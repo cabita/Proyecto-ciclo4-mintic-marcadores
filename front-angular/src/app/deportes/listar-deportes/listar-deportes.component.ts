@@ -26,11 +26,11 @@ export class ListarDeportesComponent implements OnInit {
   }
 
   crearDeporte() {
-    this.router.navigate(['deportes/crear']);
+    this.router.navigate(['admin/deportes/crear']);
   }
 
   editarDeporte(id: string) {
-    this.router.navigate([`deportes/editar/${id}`]);
+    this.router.navigate([`admin/deportes/editar/${id}`]);
   }
 
   eliminarDeporte(id:string) {

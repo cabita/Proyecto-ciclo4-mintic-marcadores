@@ -1,0 +1,20 @@
+.mt-tablero {
+  margin: 0 2%;
+  &__lista {
+    border: 1px solid #ffffff;
+    list-style: none;
+    padding: 0.8rem 1rem;
+    &-item:not(:last-child ){
+      border-bottom: 1px solid #f0f0f0;
+    }
+    &-item {
+      padding: 1rem 0 1rem 0.5rem;
+
+      display: block;
+      cursor: pointer;
+      &:hover {
+        background: rgba(255, 255, 255, 0.2);
+      }
+    }
+  }
+}

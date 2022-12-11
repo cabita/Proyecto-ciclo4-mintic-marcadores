@@ -10,8 +10,8 @@ import { TituloSeccionComponent } from './componentes/titulo-seccion/titulo-secc
 import { HeaderComponent } from './componentes/header/header.component';
 import { AlertaComponent } from './componentes/alerta/alerta.component';
 import { CardComponent } from './componentes/card/card.component';
-
-
+import { RouterModule } from '@angular/router';
+import { TableroComponent } from './componentes/tablero/tablero.component';
 
 @NgModule({
   declarations: [
@@ -23,11 +23,13 @@ import { CardComponent } from './componentes/card/card.component';
     TituloSeccionComponent,
     HeaderComponent,
     AlertaComponent,
-    CardComponent
+    CardComponent,
+    TableroComponent
   ],
   imports: [
     CommonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule
   ],
   exports: [
     BotonComponent,

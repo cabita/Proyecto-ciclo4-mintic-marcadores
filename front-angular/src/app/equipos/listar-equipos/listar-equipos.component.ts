@@ -26,11 +26,11 @@ export class ListarEquiposComponent implements OnInit {
   }
 
   crearEquipo() {
-    this.router.navigate(['equipos/crear']);
+    this.router.navigate(['admin/equipos/crear']);
   }
 
   editarEquipo(id: string) {
-    this.router.navigate([`equipos/editar/${id}`]);
+    this.router.navigate([`admin/equipos/editar/${id}`]);
   }
 
   eliminarEquipo(id:string) {

@@ -45,7 +45,7 @@ export class EditarDeporteComponent implements OnInit {
 
     if( nombre ) {
       this.deportesService.editarDeporte(this.id, nombre).subscribe( res => {
-        this.router.navigate(['/deportes']);
+        this.router.navigate(['admin/deportes']);
       }, (error => {
         this.error = error.error.msj;
       }))
@@ -55,7 +55,7 @@ export class EditarDeporteComponent implements OnInit {
 
 
   cancelar():void {
-    this.router.navigate(['/deportes']);
+    this.router.navigate(['admin/deportes']);
   }
 
 

@@ -9,17 +9,23 @@ import { ListarEquiposComponent } from './equipos/listar-equipos/listar-equipos.
 import { CrearEventoComponent } from './eventos/crear-evento/crear-evento.component';
 import { EditarEventoComponent } from './eventos/editar-evento/editar-evento.component';
 import { ListarEventosComponent } from './eventos/listar-eventos/listar-eventos.component';
+import { TableroComponent } from './shared/componentes/tablero/tablero.component';
 
 const routes: Routes = [
-  { path: 'deportes', component: ListarDeportesComponent },
-  { path: 'deportes/crear', component: CrearDeporteComponent },
-  { path: 'deportes/editar/:id', component: EditarDeporteComponent},
-  { path: 'equipos', component: ListarEquiposComponent },
-  { path: 'equipos/crear', component: CrearEquipoComponent },
-  { path: 'equipos/editar/:id', component: EditarEquipoComponent},
   { path: 'eventos', component: ListarEventosComponent },
   { path: 'eventos/crear', component: CrearEventoComponent },
-  { path: 'eventos/editar/:id', component: EditarEventoComponent}
+  { path: 'eventos/editar/:id', component: EditarEventoComponent},
+  { path: 'admin', component: TableroComponent , children: [
+    { path: 'eventos', component: ListarEventosComponent },
+    { path: 'equipos', component: ListarEquiposComponent },
+    { path: 'equipos/crear', component: CrearEquipoComponent },
+    { path: 'equipos/editar/:id', component: EditarEquipoComponent},
+    { path: 'deportes', component: ListarDeportesComponent },
+    { path: 'deportes/crear', component: CrearDeporteComponent },
+    { path: 'deportes/editar/:id', component: EditarDeporteComponent},
+    { path: 'eventos/crear', component: CrearEventoComponent },
+    { path: 'eventos/editar/:id', component: EditarEventoComponent}
+  ]}
 ];
 
 @NgModule({

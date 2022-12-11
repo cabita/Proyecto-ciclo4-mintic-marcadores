@@ -1,15 +1,13 @@
 <section class="mt-card">
-  <div class="row">
-    <div class="col-12 col-md-6 mt-card__titulo">
-      <app-titulo-seccion titulo="Equipos"></app-titulo-seccion>
-        <app-boton text="Crear equipo"
-                   (click)="crearEquipo()"
-        ></app-boton>
-    </div>
+  <div class="mt-card__titulo">
+    <app-titulo-seccion titulo="Equipos"></app-titulo-seccion>
+      <app-boton text="Crear equipo"
+                  (click)="crearEquipo()"
+      ></app-boton>
   </div>
 
   <div class="row">
-    <div class="mt-card mt-card--primary col-12 col-md-6"
+    <div class="mt-card mt-card--primary"
          [ngClass]="{'mt-card--small': sizeCard === 'small'}">
 
       <ul *ngIf="equipos"
