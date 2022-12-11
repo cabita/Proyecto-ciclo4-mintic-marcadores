@@ -1,1 +1,23 @@
-<p>select works!</p>
+<p *ngIf="form"
+   [formGroup]="form"
+   class="mt-select-field"
+   [ngClass]="{'mt-select-field--error': error !==''}">
+  <label>{{label}}</label>
+  <select formControlName="{{name}}"
+          class="mt-select-field__field"
+          (change)="getValue($event)">
+          <option *ngIf="firstOption"
+                    value=""
+                    selected
+                    disabled
+                    class="mt-selected-field__option mt-select-field__option--disabled">
+                    {{firstOption}}
+          </option>
+          <option *ngFor="let option of options"
+                    value="{{option.key}}"
+                    class="mt-selected-field__option">{{option.value}}
+          </option>
+  </select>
+  </p>
+<p class="mt-error-field" *ngIf="error">{{error}}</p>
+

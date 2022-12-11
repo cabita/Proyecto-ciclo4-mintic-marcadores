@@ -1,1 +1,53 @@
-<p>crear-evento works!</p>
+<section class="mt-card">
+
+  <app-titulo-seccion titulo="Crear evento"></app-titulo-seccion>
+
+  <form class="mt-card__form">
+    <p>
+      <app-select firstOption="Selecciona un deporte"
+                  [options] = "deportes"
+                  name = "deporte"
+                  [form]="crearEventoForm"
+                  label="Selecciona el deporte"
+                  [error]="noValidField('deporte')">
+      </app-select>
+
+      <app-select firstOption="Selecciona un equipo"
+                  [options] = "equipos"
+                  name = "equipo1"
+                  [form]="crearEventoForm"
+                  label="Selecciona el primer equipo"
+                  [error]="noValidField('equipo1')">
+      </app-select>
+
+      <app-select firstOption="Selecciona un equipo"
+                  [options] = "equipos"
+                  name = "equipo2"
+                  [form]="crearEventoForm"
+                  label="Selecciona el segundo equipo"
+                  [error]="noValidField('equipo2')">
+      </app-select>
+
+      <app-input label = "Ingresa el marcador(equipo1):"
+                 [form] = "crearEventoForm"
+                 name = "marcador1"
+                 [error] = "noValidField('marcador1')">
+      </app-input>
+      <app-input label = "Ingresa el marcador(equipo2):"
+                 [form] = "crearEventoForm"
+                 name = "marcador2"
+                 [error] = "noValidField('marcador2')">
+      </app-input>
+    </p>
+
+    <p class="mt-deportes__form-botones">
+      <app-boton text="Crear deporte"
+                 class="primario"
+                 (click)="crearEvento()"></app-boton>
+      <app-boton text="Cancelar"
+                 (click)="cancelar()"></app-boton>
+    </p>
+
+  </form>
+
+</section>

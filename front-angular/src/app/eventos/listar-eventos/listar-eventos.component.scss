@@ -1,0 +1,19 @@
+.mt-card {
+  &__botones {
+    display: flex;
+    justify-content: center;
+  }
+  &__list {
+    list-style: none;
+  }
+  &--primary {
+    border-radius: 0.8rem;
+    background-color: #232232;
+  }
+
+  &__titulo {
+    display: flex;
+    justify-content: space-between;
+  }
+
+}

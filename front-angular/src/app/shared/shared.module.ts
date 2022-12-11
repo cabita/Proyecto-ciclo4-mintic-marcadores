@@ -9,6 +9,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { TituloSeccionComponent } from './componentes/titulo-seccion/titulo-seccion.component';
 import { HeaderComponent } from './componentes/header/header.component';
 import { AlertaComponent } from './componentes/alerta/alerta.component';
+import { CardComponent } from './componentes/card/card.component';
 
 
 
@@ -21,7 +22,8 @@ import { AlertaComponent } from './componentes/alerta/alerta.component';
     InputComponent,
     TituloSeccionComponent,
     HeaderComponent,
-    AlertaComponent
+    AlertaComponent,
+    CardComponent
   ],
   imports: [
     CommonModule,
@@ -32,7 +34,8 @@ import { AlertaComponent } from './componentes/alerta/alerta.component';
     InputComponent,
     SelectComponent,
     HeaderComponent,
-    TituloSeccionComponent
+    TituloSeccionComponent,
+    CardComponent
   ]
 })
 export class SharedModule { }

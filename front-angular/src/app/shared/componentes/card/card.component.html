@@ -1,0 +1,31 @@
+<article class="mt-card">
+  <header class="mt-card__titulo">
+    <h4>{{deporte}}</h4>
+    <div class="mt-card__botones">
+      <app-boton  (click)="editar.emit(true)"
+                  class="edit">
+                  <span class="material-icons">edit</span>
+                  </app-boton>
+      <app-boton  class="delete"
+                  (click)="borrar.emit(true)">
+                  <span class="material-icons">clear</span>
+                </app-boton>
+    </div>
+  </header>
+
+  <div class="mt-card__body">
+    <dl class="mt-card__item">
+      <div class="mt-card__item-list">
+        <dt><span class="mt-card__item-bullet"> </span>{{equipo1}}</dt>
+        <dd class="mt-card__item-value">{{marcador1}}</dd>
+      </div>
+      <div class="mt-card__item-list">
+        <dt><span class="mt-card__item-bullet"> </span>{{equipo2}}</dt>
+        <dd class="mt-card__item-value">{{marcador2}}</dd>
+      </div>
+
+    </dl>
+    <p class="mt-card__body-item"></p>
+  </div>
+
+</article>

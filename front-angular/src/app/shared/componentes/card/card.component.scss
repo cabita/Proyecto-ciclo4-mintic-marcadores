@@ -1,0 +1,31 @@
+.mt-card {
+  padding: 1rem;
+  border-radius: 0.8rem;
+  background-color: #232232;
+  margin-bottom: 1rem;
+
+  &__titulo {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #FFFFFF;
+  }
+  &__item-bullet {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #83db7b;
+    display: inline-block;
+    margin-right: 0.5rem;
+  }
+  &__item-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__item-value {
+    color: #83db7b;
+  }
+}

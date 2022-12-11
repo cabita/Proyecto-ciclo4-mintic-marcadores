@@ -1,6 +1,9 @@
 <button class="mt-boton"
         [ngClass]="{'mt-boton--primario': class==='primario',
-                    'mt-boton--warning': class === 'warning'}"
+                    'mt-boton--warning': class === 'warning',
+                    'mt-boton--edit': class === 'edit',
+                    'mt-boton--delete': class === 'delete' }"
         type={{type}}>
+        <ng-content></ng-content>
         {{text}}
 </button>

@@ -2,6 +2,10 @@
   padding: 1rem;
   margin-left: 1.5rem;
 
+  &__botones {
+    text-align: center;
+  }
+
   &__item {
     display: flex;
     justify-content: space-between;

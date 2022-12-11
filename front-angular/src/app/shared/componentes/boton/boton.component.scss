@@ -20,4 +20,22 @@
       color: #FFFFFF;
     }
   }
+  &--edit {
+    margin: 0.5rem 0.5rem;
+    padding: 0.5rem 0.5rem;
+    background: transparent;
+    color: #83db7b;
+    &:hover {
+      color: darken(#83db7b, 20%);
+    }
+  }
+  &--delete {
+    padding: 0.5rem 0.5rem;
+    margin: 0.5rem 0.5rem;
+    background: transparent;
+    color: #be0f0f;
+    &:hover {
+      color: darken(#be0f0f, 10%);
+    }
+  }
 }

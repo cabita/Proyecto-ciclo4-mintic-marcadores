@@ -68,7 +68,6 @@ const actualizarEvento = async(req, res) => {
             const evento = {}
             evento._equipo1 = _equipo1
             evento._equipo2 = _equipo2
-            evento.fechaEvento = fechaEvento
             evento._deporteId = _deporteId
             evento.marcador1 = marcador1
             evento.marcador2 = marcador2
@@ -98,7 +97,7 @@ const eliminarEvento = async(req, res) => {
         const respuesta = await eventosModel.deleteOne(
             {_id: id}
         )
-        res.status(200).send("El registro se ha eliminado")
+        res.status(200).send({ 'msj': "El registro se ha eliminado"})
     }
 }
 

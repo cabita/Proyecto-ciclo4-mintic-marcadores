@@ -1,10 +1,10 @@
 export interface Evento {
-  id: string;
-  equipo1Id: string;
-  equipo2Id: string;
-  deporteId: string;
+  _id: string;
+  _equipo1: string;
+  _equipo2: string;
+  _deporteId: string;
   fechaEvento: Date;
-  marcador1: Number;
-  marcador2: Number;
+  marcador1: number;
+  marcador2: number;
   fechaCreacion: Date;
 }

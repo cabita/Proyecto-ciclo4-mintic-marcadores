@@ -1,0 +1,26 @@
+.mt-card {
+  padding: 1rem;
+  margin-left: 1.5rem;
+
+  &__form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-bullet {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: #83db7b;
+      display: inline-block;
+      margin-right: 0.5rem;
+    }
+  }
+}
+

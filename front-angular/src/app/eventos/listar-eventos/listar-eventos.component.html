@@ -1,3 +1,25 @@
-<ul *ngIf="eventos">
-  <li *ngFor="let evento of eventos">{{ eventos | json }}</li>
+<section class="mt-card container">
+  <div class="row">
+    <div class="col-12 mt-card__titulo">
+      <app-titulo-seccion titulo="Eventos"></app-titulo-seccion>
+        <app-boton text="Crear evento"
+                   (click)="crearEvento()"
+        ></app-boton>
+    </div>
+  </div>
+
+<ul *ngIf="eventos"
+    class="row p-0 mt-card__list">
+  <li *ngFor="let evento of eventos"
+      class="mt-card__list-item col-12 col-sm-6 col-md-4 col-lg-4">
+    <app-card [deporte]="evento._deporteId"
+              [equipo1]="evento._equipo1"
+              [equipo2]="evento._equipo2"
+              [marcador1]="evento.marcador1"
+              [marcador2]="evento.marcador2"
+              (editar)="editarEvento(evento._id)"
+              (borrar)="eliminarEvento(evento._id)">
+    </app-card>
+  </li>
 </ul>
+</section>

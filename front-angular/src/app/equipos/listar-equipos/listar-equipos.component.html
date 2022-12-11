@@ -19,11 +19,14 @@
             <span class="mt-card__item-bullet"> </span>{{ equipo.nombre }}
           </p>
           <div>
-            <app-boton text="Editar"
-                       (click)="editarEquipo(equipo._id)"></app-boton>
-            <app-boton text="Eliminar"
-                       class="warning"
-                       (click)="eliminarEquipo(equipo._id)"></app-boton>
+            <app-boton class="edit"
+                       (click)="editarEquipo(equipo._id)">
+                       <span class="material-icons">edit</span>
+            </app-boton>
+            <app-boton class="delete"
+                       (click)="eliminarEquipo(equipo._id)">
+                       <span class="material-icons">clear</span>
+            </app-boton>
           </div>
         </li>
       </ul>
