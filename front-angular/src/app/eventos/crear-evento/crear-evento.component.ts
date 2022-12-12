@@ -89,11 +89,7 @@ export class CrearEventoComponent implements OnInit {
 
     if(touchedField && errors && errors['required']) {
       return 'Este dato es requerido'
-    } else if(errors && errors['maxlength']) {
-
-      return `El número máximo de caracteres es ${errors['maxlength'].requiredLength}`
-    }
-    else return '';
+    } else return '';
   }
 
 

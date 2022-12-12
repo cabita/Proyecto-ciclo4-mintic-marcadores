@@ -7,6 +7,7 @@ const PUERTO = 3000;
 const equipoRuta = require('./routers/equiposRouter.js');
 const deporteRuta = require('./routers/deportesRouter.js');
 const eventoRuta = require('./routers/eventosRouter.js');
+const usuarioRuta = require('./routers/usuariosRouter.js');
 
 servidor.get('/', (req, res) =>  {
     res.send('hello world');
@@ -17,6 +18,7 @@ servidor.use(express.json());
 servidor.use('/equipos', equipoRuta);
 servidor.use('/deportes', deporteRuta);
 servidor.use('/eventos', eventoRuta);
+servidor.use('/usuarios', usuarioRuta);
 
 servidor.listen(PUERTO, () => {})
 

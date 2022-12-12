@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthContainerComponent } from './auth/auth-container/auth-container.component';
 import { CrearDeporteComponent } from './deportes/crear-deporte/crear-deporte.component';
 import { EditarDeporteComponent } from './deportes/editar-deporte/editar-deporte.component';
 import { ListarDeportesComponent } from './deportes/listar-deportes/listar-deportes.component';
@@ -24,8 +25,16 @@ const routes: Routes = [
     { path: 'deportes/crear', component: CrearDeporteComponent },
     { path: 'deportes/editar/:id', component: EditarDeporteComponent},
     { path: 'eventos/crear', component: CrearEventoComponent },
-    { path: 'eventos/editar/:id', component: EditarEventoComponent}
-  ]}
+    { path: 'eventos/editar/:id', component: EditarEventoComponent},
+    { path: '', component: ListarDeportesComponent}
+  ]},
+  { path: '', component: ListarEventosComponent},
+  {path: 'auth', component: AuthContainerComponent,
+  children:[
+    {
+      path:'', loadChildren:() => import('./auth/auth.module').then(m =>m.AuthModule)
+    }
+  ]},
 ];
 
 @NgModule({

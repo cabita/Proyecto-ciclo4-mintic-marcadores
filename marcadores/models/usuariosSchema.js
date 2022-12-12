@@ -1,3 +1,5 @@
+const {mongoose, Schema} = require('mongoose');
+
 const usuariosSchema = new mongoose.Schema(
     {
         nombreCompleto: {
@@ -5,7 +7,7 @@ const usuariosSchema = new mongoose.Schema(
             required: true,
             trim: true
         },
-        usuario: {
+        username: {
             type: String,
             required: true,
             trim: true
@@ -25,6 +27,11 @@ const usuariosSchema = new mongoose.Schema(
             required: true,
             default: 'Gestor de eventos'
         },
+        status: {
+            type: Boolean,
+            required: true,
+            default: true
+        },
         fechaCreacion: {
             type: Date,
             default: Date.now()
@@ -32,4 +39,4 @@ const usuariosSchema = new mongoose.Schema(
     }
 )
 
-module.exports = mongoose.model('equipos', usuariosSchema)
+module.exports = mongoose.model('usuarios', usuariosSchema)

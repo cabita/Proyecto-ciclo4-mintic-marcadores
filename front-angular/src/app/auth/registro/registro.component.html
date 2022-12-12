@@ -1,0 +1,40 @@
+<section class="mt-card">
+
+  <app-titulo-seccion titulo="Crear cuenta"></app-titulo-seccion>
+  <p> Bienvenido!! Ingresa tus datos para crear un nuevo usuario </p>
+
+  <form class="mt-card__form">
+    <p>
+      <app-input label = "Email"
+                 [form] = "registroForm"
+                 name = "email"
+                 [error]="noValidField('email')">
+      </app-input>
+      <app-input label = "Password"
+                 [form] = "registroForm"
+                 name = "password"
+                 type = "password"
+                 [error]="noValidField('password')">
+      </app-input>
+      <app-input label = "Nombre completo"
+                 [form] = "registroForm"
+                 name = "nombreCompleto"
+                 [error]="noValidField('nombreCompleto')">
+      </app-input>
+      <app-input label = "username"
+                 [form] = "registroForm"
+                 name = "username"
+                 [error]="noValidField('username')">
+      </app-input>
+    </p>
+
+    <p class="mt-card__form-botones">
+      <app-boton text="Crear cuenta"
+                 class="primario"
+                 (click)="registroUsuario()">
+      </app-boton>
+
+  </form>
+
+</section>
+

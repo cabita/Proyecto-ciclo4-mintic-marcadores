@@ -1,6 +1,8 @@
+import { ThisReceiver } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { map } from 'rxjs';
+import { AuthService } from 'src/app/auth/auth.service';
 import { DeportesService } from 'src/app/deportes/deportes.service';
 import { EquiposService } from 'src/app/equipos/equipos.service';
 import { Deporte } from 'src/app/shared/modelos/deportes.interface';
@@ -17,17 +19,18 @@ export class ListarEventosComponent implements OnInit {
   eventos:Evento[] = [];
   equipos:Equipo[] = [];
   deportes:Deporte[] = [];
+  existeToken$ = this.authService.existetoken$;
 
   constructor( private eventosService: EventosService,
                private equiposService: EquiposService,
                private deportesService: DeportesService,
+               private authService: AuthService,
                private router: Router ) {}
 
   ngOnInit(): void {
     this.listarDeportes();
     this.listarEquipos();
     this.listarEventos();
-
   }
 
   listarEventos () {
@@ -47,7 +50,7 @@ export class ListarEventosComponent implements OnInit {
   }
 
   crearEvento() {
-    this.router.navigate(['eventos/crear']);
+    this.router.navigate(['admin/eventos/crear']);
   }
 
   listarEquipos() {
@@ -70,7 +73,7 @@ export class ListarEventosComponent implements OnInit {
   }
 
   editarEvento(id: string) {
-    this.router.navigate([`eventos/editar/${id}`]);
+    this.router.navigate([`admin/eventos/editar/${id}`]);
   }
 
   eliminarEvento(id:string) {

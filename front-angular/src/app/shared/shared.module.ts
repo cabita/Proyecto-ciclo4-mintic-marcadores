@@ -10,8 +10,10 @@ import { TituloSeccionComponent } from './componentes/titulo-seccion/titulo-secc
 import { HeaderComponent } from './componentes/header/header.component';
 import { AlertaComponent } from './componentes/alerta/alerta.component';
 import { CardComponent } from './componentes/card/card.component';
-import { RouterModule } from '@angular/router';
+import { RouterLink, RouterModule } from '@angular/router';
 import { TableroComponent } from './componentes/tablero/tablero.component';
+import { MenuComponent } from './componentes/menu/menu.component';
+import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -24,12 +26,15 @@ import { TableroComponent } from './componentes/tablero/tablero.component';
     HeaderComponent,
     AlertaComponent,
     CardComponent,
-    TableroComponent
+    TableroComponent,
+    MenuComponent
   ],
   imports: [
     CommonModule,
     ReactiveFormsModule,
-    RouterModule
+    RouterModule,
+    NgbCollapseModule,
+    RouterLink
   ],
   exports: [
     BotonComponent,
@@ -37,7 +42,8 @@ import { TableroComponent } from './componentes/tablero/tablero.component';
     SelectComponent,
     HeaderComponent,
     TituloSeccionComponent,
-    CardComponent
+    CardComponent,
+    MenuComponent
   ]
 })
 export class SharedModule { }

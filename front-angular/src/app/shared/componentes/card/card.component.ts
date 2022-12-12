@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { AuthService } from 'src/app/auth/auth.service';
 
 @Component({
   selector: 'app-card',
@@ -13,9 +14,10 @@ export class CardComponent implements OnInit {
   @Input() marcador2!:number;
   @Output() editar = new EventEmitter<boolean>(false);
   @Output() borrar = new EventEmitter<boolean>(false);
+  existeToken$ = this.authService.existetoken$;
 
 
-  constructor() { }
+  constructor( private authService: AuthService ) { }
 
   ngOnInit(): void {
   }

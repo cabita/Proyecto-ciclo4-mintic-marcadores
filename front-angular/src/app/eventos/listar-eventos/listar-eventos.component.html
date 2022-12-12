@@ -4,6 +4,7 @@
       <app-titulo-seccion titulo="Eventos"></app-titulo-seccion>
         <app-boton text="Crear evento"
                    (click)="crearEvento()"
+                   *ngIf="existeToken$ | async"
         ></app-boton>
     </div>
   </div>

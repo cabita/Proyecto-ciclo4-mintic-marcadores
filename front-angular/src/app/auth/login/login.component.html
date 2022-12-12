@@ -1,0 +1,29 @@
+<section class="mt-card">
+
+  <app-titulo-seccion titulo="Login"></app-titulo-seccion>
+  <p> Ingresa tus datos para iniciar sesión </p>
+
+  <form class="mt-card__form">
+    <p>
+      <app-input label = "Email"
+                 [form] = "loginForm"
+                 name = "email"
+                 [error]="noValidField('email')">
+      </app-input>
+      <app-input label = "Password"
+                 [form] = "loginForm"
+                 name = "password"
+                 type = "password"
+                 [error]="noValidField('password')">
+      </app-input>
+    </p>
+
+    <p class="mt-card__form-botones">
+      <app-boton text="Login"
+                 class="primario"
+                 (click)="login()">
+      </app-boton>
+
+  </form>
+
+</section>
