@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
 
 @Component({
@@ -18,7 +19,8 @@ export class RegistroComponent implements OnInit {
   })
 
   constructor( private formBuilder: FormBuilder,
-               private authService: AuthService ) { }
+               private authService: AuthService,
+               private router: Router ) { }
 
   ngOnInit(): void {
   }
@@ -36,7 +38,7 @@ export class RegistroComponent implements OnInit {
 
     if(email && password ) {
       this.authService.registrarUsuario(data).subscribe( res => {
-        console.log(res)
+        this.router.navigate(['auth/login']);
       })
     }
   }
